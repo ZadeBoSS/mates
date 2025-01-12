@@ -47,10 +47,10 @@ const problemas = [
     {
         tipo: 'multiples-operaciones',
         titulo: 'Calcula el valor numérico de los estos polinomios',
-        enunciado: '',
+        enunciado: '2x + 3y para x = 3, y = 2',
         operaciones: [
             {
-                pregunta: '2x + 3y para x = 3, y = 2', respuesta: '12'
+                pregunta: '', respuesta: '12'
             }
         ],
         pista: '',
@@ -59,10 +59,10 @@ const problemas = [
     {
         tipo: 'multiples-operaciones',
         titulo: 'Calcula el valor numérico de los estos polinomios',
-        enunciado: '',
+        enunciado: '6 – a para a = –5',
         operaciones: [
             {
-                pregunta: '6 – a para a = –5', respuesta: '11'
+                pregunta: '', respuesta: '11'
             }
         ],
         pista: '',
@@ -71,10 +71,10 @@ const problemas = [
     {
         tipo: 'multiples-operaciones',
         titulo: 'Calcula el valor numérico de los estos polinomios',
-        enunciado: '',
+        enunciado: '3a + 4b – c para b = –1, a = –1 y c = +2',
         operaciones: [
             {
-                pregunta: '3a + 4b – c para b = –1, a = –1 y c = +2', respuesta: '-9'
+                pregunta: '', respuesta: '-9'
             }
         ],
         pista: '',
