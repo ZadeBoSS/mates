@@ -1,5 +1,5 @@
 
-// Problemas matemáticos mejorados
+/* // Problemas matemáticos mejorados
 const problemas = [
     /*     {
             pregunta: "En una tienda, un libro cuesta $250. Si hay un descuento del 20%, ¿cuál es el precio final del libro?",
@@ -32,9 +32,9 @@ const problemas = [
             pista: "Resuelve cada operación por separado.",
             explicacion: "Se presentan las respuestas individuales."
         }
-    ];
+    ]; */
     
-    
+    export function mates(problemas){
     let problemaActual = 0;
     let problemasResueltos = new Array(problemas.length).fill(false);
     let tiempoInicio;
@@ -491,3 +491,4 @@ const problemas = [
     // Inicializar la aplicación
     window.onload = inicializarCarrusel;
     
+    }
