@@ -5,7 +5,7 @@ const problemas = [
         titulo: "¿Son directa o inversamente proporcionales?",
         pregunta: "La cantidad de árboles talados y los kilos de leña almacenados.",
         respuesta: "directamente",
-        pista: "Escribe <strong>directamente</strong> o <strong>inversamente</strong> segun convenga.<br>
+        pista: "Escribe <strong>directamente</strong> o <strong>inversamente</strong> segun convenga.<br>",
         explicacion: ""
     },
     {
