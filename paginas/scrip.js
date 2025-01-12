@@ -496,5 +496,4 @@ function verificarMultiples(index) {
 // Inicializar la aplicación
 window.onload = inicializarCarrusel;
 
-
 }
