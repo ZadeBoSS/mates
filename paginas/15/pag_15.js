@@ -33,7 +33,7 @@ const problemas = [
             { pregunta: "(-5) – (-5) – (+7) + (-6)", respuesta: "-13" },
             { pregunta: "(-1) – (-10) + (+5) – (+7)", respuesta: "7" },
             { pregunta: "14 - (12 + 2)", respuesta: "0" },
-            { pregunta: "-1 – (2 – 5) + (7 – 4)", respuesta: "3" }
+            { pregunta: "-1 – (2 – 5) + (7 – 4)", respuesta: "5" }
         ],
         pista: "Resuelve las operaciones en el orden correcto.",
         explicacion: "Aplica las reglas de los paréntesis y los signos correctamente."
