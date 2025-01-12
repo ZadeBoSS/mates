@@ -5,7 +5,7 @@ const problemas = [
         titulo: "Factor Común",
         operaciones: [
             { pregunta: "3·b + 5·b – 2·b", respuesta: "6·b" },
-            { pregunta: "6x4 + 3x4 + 2x4", respuesta: "11x4" },
+            { pregunta: "6⁴ + 3⁴ + 2⁴", respuesta: "11x4" },
             { pregunta: "6·a + 6·b", respuesta: "6·(a + b)" },
             { pregunta: "2·a + 2·c", respuesta: "2·(a + c)" }
         ],
