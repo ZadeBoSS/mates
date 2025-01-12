@@ -3,6 +3,7 @@ const problemas = [
     {
         tipo: "multiples-operaciones",
         titulo: "Factor Común",
+        enunciado:'Calcula el factor común',
         operaciones: [
             { pregunta: "3·b + 5·b – 2·b", respuesta: "6·b" },
             { pregunta: "7·a - 3·a + 5·a", respuesta: "9·a" },
@@ -15,6 +16,7 @@ const problemas = [
     {
         tipo: "multiples-operaciones",
         titulo: "Multiplicaciones",
+        enunciado:'Resuelve las multiplicaciones',
         operaciones: [
             { pregunta: "2306 x 305", respuesta: "703330" },
             { pregunta: "(-2) · (-5) · (-9)", respuesta: "-90" },
@@ -27,13 +29,14 @@ const problemas = [
     {
         tipo: "multiples-operaciones",
         titulo: "Propiedades",
+        enunciado:'Escribe el nombre de la propiedad que corresponda',
         operaciones: [
             { pregunta: "55 + 23 + 15 = 55 + 15 + 23", respuesta: "Conmutativa" },
             { pregunta: "7 · 25 · 4 = 7 · (25 · 4)", respuesta: "Asociativa" },
             { pregunta: "5 · (8 + 18) = 5 · 8 + 5 · 18", respuesta: "Distributiva" },
             { pregunta: "87 − 23 = 84 − 20 = 64", respuesta: "Ninguna" }
         ],
-        pista: "Identifica cómo cambian el orden o la agrupación. Recuerda los tipos de propiedades:(Conmutativa, Asociativa y Distributiva o Ninguna)",
+        pista: "Identifica cómo cambian el orden o la agrupación.<br>Recuerda los tipos de propiedades:(Conmutativa, Asociativa y Distributiva o Ninguna)",
         explicacion: "Las propiedades indican cómo operar los números manteniendo el resultado."
     }
 ];
