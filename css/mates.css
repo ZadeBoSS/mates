@@ -193,7 +193,7 @@ summary:hover {
 }
 
 .navigation {
-    width:110%;
+    width:97%;
     display: flex;
     justify-content: space-between;
     gap: 1rem;
@@ -232,7 +232,6 @@ summary:hover {
 }
 
 .tool.accordeon {
-    display:none;
     height: 4.35em;
     position: relative;
     z-index: 2;
@@ -519,7 +518,7 @@ input[type="number"] {
         }
     }
 }
-#boton-pizarra {display:none};
+
 #pizarra {
     width: 80vw;
     height: 65vh;
@@ -574,7 +573,7 @@ input[type="number"] {
 }
 
 .icono-back,.icono-next {
-    width:4em;
+    width:5em;
 
 }
 .icono-back {
