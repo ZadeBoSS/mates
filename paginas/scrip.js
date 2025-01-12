@@ -1,7 +1,5 @@
 export function mates(problemas){
-
-
-
+    
 let problemaActual = 0;
 let problemasResueltos = new Array(problemas.length).fill(false);
 let tiempoInicio;
@@ -467,11 +465,13 @@ function verificarMultiples(index) {
 
     problema.operaciones.forEach((op, idx) => {
         const input = document.getElementById(`multiInput${index}-${idx}`);
-        const respuestaUsuario = parseFloat(input.value);
-        const diferencia = Math.abs(respuestaUsuario - op.respuesta);
-        const tolerancia = op.respuesta % 1 === 0 ? 0 : 0.1;
+        let respuestaUsuario = input.value.trim().split(/\s+/).join('');  // Elimina los espacios extra
+        respuestaUsuario = respuestaUsuario.replace('·', '.');  // Reemplaza "·" por "."
 
-        if (diferencia > tolerancia) {
+        let respuestaCorrecta = op.respuesta.trim().split(/\s+/).join('');  // Elimina los espacios extra
+        respuestaCorrecta = respuestaCorrecta.replace('·', '.');  // Reemplaza "·" por "."
+
+        if (respuestaUsuario !== respuestaCorrecta) {
             todasCorrectas = false;
         }
     });
@@ -493,9 +493,8 @@ function verificarMultiples(index) {
     actualizarBarraProgreso();
 }
 
-
-
 // Inicializar la aplicación
 window.onload = inicializarCarrusel;
+
 
 }
