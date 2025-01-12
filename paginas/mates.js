@@ -1,4 +1,5 @@
-    export function mates(problemas){
+export function mates(problemas){
+
 
 let problemaActual = 0;
 let problemasResueltos = new Array(problemas.length).fill(false);
@@ -26,6 +27,10 @@ function inicializarCarrusel() {
                     `).join('')}
                     </div>
                     <button class="nav-btn check-btn multi">Verificar Respuestas</button>
+                        <div class="hints-section">
+                            <button class="hint-btn">Ver Pista</button>
+                            <div class="hint-content">${problema.pista}</div>
+                        </div>
                     <div class="feedback"></div>
                 `;
         } else {
@@ -283,7 +288,7 @@ function inicializarEventosTactiles() {
         }
     });
 }
- 
+
 function inicializarPizarra() {
     // Crear el botón que abrirá el pop-up
     const botonAbrirPizarra = document.createElement('button');
@@ -456,24 +461,29 @@ function verificarRespuesta(index) {
 
 function verificarMultiples(index) {
     const problema = problemas[index];
-    console.log(problema);
-
     let todasCorrectas = true;
+    const feedback = document.querySelectorAll('.feedback')[index];
 
     problema.operaciones.forEach((op, idx) => {
         const input = document.getElementById(`multiInput${index}-${idx}`);
         const respuestaUsuario = parseFloat(input.value);
-        console.log(respuestaUsuario);
-        if (respuestaUsuario !== op.respuesta) {
+        const diferencia = Math.abs(respuestaUsuario - op.respuesta);
+        const tolerancia = op.respuesta % 1 === 0 ? 0 : 0.1;
+
+        if (diferencia > tolerancia) {
             todasCorrectas = false;
         }
     });
 
-    const feedback = document.querySelectorAll('.feedback')[index];
     if (todasCorrectas) {
-        feedback.textContent = "¡Todas las respuestas son correctas!";
+        feedback.textContent = `¡Correcto! ${problemas[index].explicacion}`;
         feedback.className = "feedback correct";
         problemasResueltos[index] = true;
+
+        const nextBtn = document.querySelector('.next-btn');
+        if (index < problemas.length - 1) {
+            nextBtn.disabled = false;
+        }
     } else {
         feedback.textContent = "Algunas respuestas son incorrectas. Intenta de nuevo.";
         feedback.className = "feedback incorrect";
@@ -483,8 +493,8 @@ function verificarMultiples(index) {
 }
 
 
+
 // Inicializar la aplicación
 window.onload = inicializarCarrusel;
-
     
-    }
+}
