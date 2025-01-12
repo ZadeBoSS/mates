@@ -519,7 +519,7 @@ input[type="number"] {
         }
     }
 }
-
+#boton-pìzarra {display:none};
 #pizarra {
     width: 80vw;
     height: 65vh;
