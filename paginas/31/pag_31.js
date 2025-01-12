@@ -30,13 +30,6 @@ const problemas = [
         explicacion: ""
     },
     {
-        titulo: "Calcula el % de rebaja que se ha aplicado",
-        pregunta: "23,95 <strong>ANTES</strong> 15,95 <strong>DESPUES</strong>",
-        respuesta: "33.41",
-        pista: "",
-        explicacion: ""
-    },
-    {
         tipo: "multiples-operaciones",
         titulo: "Calcula el cuarto término de las siguientes proporciones",
         operaciones: [
