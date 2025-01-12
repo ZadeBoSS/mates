@@ -193,7 +193,7 @@ summary:hover {
 }
 
 .navigation {
-    width:108%;
+    width:64%;
     display: flex;
     justify-content: space-between;
     gap: 1rem;
@@ -583,4 +583,9 @@ input[type="number"] {
 #next,back {
     position:relative;
     top:-20em;
+}
+@media(max-width:1024px){
+    .navigation {
+        width:108%;
+    }
 }
