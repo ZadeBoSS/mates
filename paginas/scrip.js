@@ -1,5 +1,5 @@
 export function mates(problemas){
-    
+
 let problemaActual = 0;
 let problemasResueltos = new Array(problemas.length).fill(false);
 let tiempoInicio;
@@ -17,6 +17,8 @@ function inicializarCarrusel() {
         if (problema.tipo === "multiples-operaciones") {
             card.innerHTML = `
                     <h2>${problema.titulo}</h2>
+                    <p>${problema.enunciado}</p>
+                    <br>
                     <div class="operaciones">
                     ${problema.operaciones.map((op, idx) => `
                         <div class="operation">
@@ -34,7 +36,7 @@ function inicializarCarrusel() {
                 `;
         } else {
             card.innerHTML = `
-                    <h2>Problema ${index + 1}</h2>
+                    <h2>${problema.titulo}</h2>
                     <p>${problema.pregunta}</p>
                     <div class="answer-section">
                         <input type="text" id="input${index + 1}" step="0.01" class="answer-input" placeholder="Escribe tu respuesta aquí">
@@ -465,11 +467,8 @@ function verificarMultiples(index) {
 
     problema.operaciones.forEach((op, idx) => {
         const input = document.getElementById(`multiInput${index}-${idx}`);
-        let respuestaUsuario = input.value.trim().split(/\s+/).join('');  // Elimina los espacios extra
-        respuestaUsuario = respuestaUsuario.replace('·', '.');  // Reemplaza "·" por "."
-
-        let respuestaCorrecta = op.respuesta.trim().split(/\s+/).join('');  // Elimina los espacios extra
-        respuestaCorrecta = respuestaCorrecta.replace('·', '.');  // Reemplaza "·" por "."
+        const respuestaUsuario = input.value.trim();  // Obtenemos el valor del input como texto
+        const respuestaCorrecta = op.respuesta.trim();  // Aseguramos que la respuesta correcta sea también texto
 
         if (respuestaUsuario !== respuestaCorrecta) {
             todasCorrectas = false;
@@ -492,6 +491,9 @@ function verificarMultiples(index) {
 
     actualizarBarraProgreso();
 }
+
+
+
 
 // Inicializar la aplicación
 window.onload = inicializarCarrusel;
