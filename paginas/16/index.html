@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Matemáticas Interactivas</title>
+    <link rel="stylesheet" href="../../css/mates.css">
+</head>
+
+<body>
+    <div class="container" id="actividad">
+        <button class="toggle-btn">☰</button>
+        <div class="div-sidebar">
+
+            <div class="sidebar">
+                <div class="sidebar-content">
+                    <h2>Herramientas de Aprendizaje</h2>
+
+                    <!-- Calculadora Mejorada -->
+                    <div class="tool calculadora">
+                        <h3>📱 Calculadora Científica</h3>
+                        <div id="calculatorDisplay"></div>
+                        <div id="calculator"></div>
+                    </div>
+
+                    <!-- Conversor de Unidades -->
+                    <div class="tool accordeon">
+                        <h3>🔄 Conversor de Unidades</h3>
+                        <div class="conversor">
+
+                            <div class="datos-conversion">
+                                <select id="unitType" class="answer-input">
+                                    <option value="length">Longitud</option>
+                                    <option value="mass">Masa</option>
+                                    <option value="volume">Volumen</option>
+                                </select>
+                                <input type="number" id="unitInput" class="answer-input" placeholder="Valor">
+                            </div>
+                            <div class="unidades-conversion">
+                                <select id="fromUnit" class="answer-input"></select>
+                                <select id="toUnit" class="answer-input"></select>
+                            </div>
+                        </div>
+                        <div id="conversionResult"></div>
+                    </div>
+
+                    <!-- Fórmulas Matemáticas -->
+                    <div class="tool accordeon">
+                        <h3>📚 Fórmulas Esenciales</h3>
+                        <div class="formula-list">
+                            <details>
+                                <summary>Geometría</summary>
+                                <table class="tool-table">
+                                    <tr>
+                                        <td>Área del círculo</td>
+                                        <td>πr²</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Área del triángulo</td>
+                                        <td>(b × h) ÷ 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Volumen del cubo</td>
+                                        <td>a³</td>
+                                    </tr>
+                                </table>
+                            </details>
+                            <details>
+                                <summary>Álgebra</summary>
+                                <table class="tool-table">
+                                    <tr>
+                                        <td>Ecuación cuadrática</td>
+                                        <td>x = (-b ± √(b² - 4ac)) ÷ 2a</td>
+                                    </tr>
+                                </table>
+                            </details>
+                        </div>
+                    </div>
+
+                    <!-- Block de Notas -->
+                    <div class="tool accordeon">
+                        <h3>📝 Bloc de Notas</h3>
+                        <textarea id="notePad" class="answer-input" rows="4"
+                            placeholder="Toma notas aquí..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="carousel-container">
+            <div class="timer" style="display:none">00:00</div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 0%"></div>
+            </div>
+            <!-- Las tarjetas de problemas se agregarán con JavaScript -->
+        </div>
+    </div>
+    <script type="module" src="pag_16.js"></script>
+</body>
+
+</html>
