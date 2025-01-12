@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root {
+    /* Botones */
+    --boton-opciones: #2563eb;
+    --boton-operaciones: yellow;
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --accent-color: #3b82f6;
+    --background-color: #f8fafc;
+    --sidebar-color: #1e293b;
+    --card-color: #ffffff;
+    --text-color: #1e293b;
+    --success-color: #22c55e;
+    --error-color: #ef4444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.div-sidebar {
+    position: fixed;
+    z-index: 99;
+    width: 0%;
+    height: 105%;
+    background-color: var(--sidebar-color);
+    border-radius: 0 20px 20px 0;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del Sidebar */
+.sidebar {
+    width: 0;
+    background-color: transparent;
+    color: white;
+    overflow-y: auto;
+    scrollbar-color: #fff transparent;
+    /* Para navegadores como Firefox */
+    transition: 0.3s ease-in-out;
+    position: fixed;
+    height: 95%;
+    top: 5%;
+    z-index: 100;
+    border-radius: 0 30px 30px 0;
+    scrollbar-width: thin;
+}
+
+h2 {
+    text-align: center;
+}
+
+.div-sidebar.active {
+    width: 83%;
+}
+
+.sidebar.active {
+    width: 80%;
+}
+
+.sidebar-content {
+    padding: 2rem;
+    padding-top: 5em;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+summary {
+    cursor: pointer;
+    transition: transform 0.25s ease-in;
+}
+
+summary:hover {
+    transform: translateY(-3px);
+    color: red;
+}
+
+.sidebar.active .sidebar-content {
+    opacity: 1;
+}
+
+.toggle-btn {
+    width: 3.5em;
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    z-index: 101;
+    background: var(--boton-opciones);
+    color: white;
+    border: none;
+    aspect-ratio: 1/1;
+    padding: 0.15rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.toggle-btn:hover {
+    transform: scale(1.05);
+}
+
+#boton-pizarra {
+    display: flex;
+    top: 15%;
+}
+
+.icono {
+    max-width: 1em;
+    max-height: 1em;
+}
+
+/* Estilos mejorados del Carrusel */
+.carousel-container {
+    flex-grow: 1;
+    margin-left: 5rem;
+    padding: 2rem;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+}
+
+.problem-card {
+    background: var(--card-color);
+    padding: 2rem;
+    padding-top: 0;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+    margin-bottom: 2rem;
+}
+
+.operaciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+}
+
+.operation {
+    margin: auto;
+    flex: 0 1 calc(40% - 10px);
+    /* Cada elemento ocupa el 50% menos el espacio del gap */
+    box-sizing: border-box;
+    /* Incluye el padding y borde dentro del ancho total */
+    padding: 0 20px;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.problem-card.active {
+    display: block;
+}
+
+.problem-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.problem-card p {
+    font-size: 1.2rem;
+}
+
+.navigation {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.nav-btn {
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.nav-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    background: var(--secondary-color);
+}
+
+.nav-btn:disabled {
+    background: #cbd5e1;
+    cursor: not-allowed;
+}
+
+/* Estilos mejorados de las herramientas */
+.tool {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s;
+}
+
+.tool.accordeon {
+    height: 4.35em;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.accordeon:hover {
+    background: #fff;
+    color: #000;
+    border-radius: 30px;
+}
+
+.accordeon.abierto:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--accent-color);
+}
+
+.abierto {
+    height: 100% !important;
+}
+
+.tool.calculadora {
+    margin: 2em auto;
+    width: 20rem;
+}
+
+.conversor {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.conversor .datos-conversion,
+.conversor .unidades-conversion {
+    width: 30%;
+}
+
+.tool:hover {
+    transform: translateY(-2px);
+}
+
+.tool h3 {
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+
+/* Calculadora mejorada */
+#calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+#calculatorDisplay {
+    background: white;
+    color: var(--text-color);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    text-align: right;
+    font-size: 1.2rem;
+    min-height: 3rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calc-btn {
+    padding: 0.75rem;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 600;
+font-size:1.5em;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.calc-btn:hover {
+    transform: scale(1.05);
+    background: var(--secondary-color);
+}
+
+/* Entrada de respuesta mejorada */
+.answer-section {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 0.75rem;
+    border: 2px solid #e2e8f0;
+}
+
+.answer-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    transition: border-color 0.2s;
+    margin-bottom: 1rem;
+}
+
+/* Para Chrome, Safari y Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Para Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Opcional: para mantener un estilo uniforme */
+input[type="number"] {
+    appearance: textfield;
+    /* Estilo neutral sin flechas */
+}
+
+.answer-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.feedback {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: none;
+    animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.feedback.correct {
+    background: var(--success-color);
+    color: white;
+    display: block;
+}
+
+.feedback.incorrect {
+    background: var(--error-color);
+    color: white;
+    display: block;
+}
+
+/* Nuevas características */
+.progress-bar {
+    max-width: 800px;
+    width: 90%;
+    height: 2.5rem;
+    background: #e2e8f0;
+    border-radius: 1rem;
+    margin: 2rem 0;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: var(--success-color);
+    transition: width 0.3s ease;
+}
+
+.hints-section {
+    margin-top: 1rem;
+}
+
+.hint-btn {
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.hint-btn:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
+.hint-content {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 0.5rem;
+    border-left: 4px solid var(--accent-color);
+}
+
+/* Nuevas herramientas */
+.tool-table {
+    width: 100%;
+    margin-top: 1rem;
+    border-collapse: collapse;
+}
+
+.tool-table th,
+.tool-table td {
+    padding: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+}
+
+.tool-table th {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    background: #000000e0;
+    filter: blur(5px) brightness(1.2) contrast(1.5);
+    width: 100%;
+    z-index: 102;
+    height: 100%;
+    top: 0%;
+    animation: fadeIn 0.5s ease-in;
+
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: white;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.boton-cerrar,
+.boton-reiniciar {
+    font-size: 150%;
+    font-weight: bold;
+    color: #fff;
+    background: transparent;
+    position: absolute;
+    cursor: pointer;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    padding: 0 0.5em;
+    transition: all 0.4s ease-in;
+}
+
+.boton-cerrar {
+    right: 5%;
+    top: -3em;
+}
+
+.boton-reiniciar {
+    position: relative;
+    bottom: -4em;
+}
+
+.boton-cerrar:hover,
+.boton-reiniciar:hover {
+    background: #fff;
+    color: #000;
+
+    svg {
+        path {
+            fill: #000;
+        }
+    }
+}
+
+#pizarra {
+    width: 80vw;
+    height: 65vh;
+    position: relative;
+    background: #000000cc;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: crosshair;
+}
+
+.timer {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+.next-btn {
+    width: 23%;
+    right:1%;
+    position: absolute;
+    bottom: 45%;
+    z-index: 9999;
+    background: transparent !important;
+
+    svg path {
+        fill: #2563eb
+    }
+}
+
+.next-btn:disabled {
+    svg path {
+        fill: gray;
+    }
+}
+.prev-btn {
+    transform:rotateZ(90deg);
+    width: 23%;
+    left:-1.3%;
+    position: absolute;
+    bottom: 35%;
+    z-index: 9999;
+    background: transparent !important;
+
+    svg path {
+        fill: #2563eb
+    }
+}
+
+.prev-btn:disabled {
+    svg path {
+        fill: gray;
+    }
+}
