@@ -2,7 +2,8 @@ import {mates} from '../script.js';
 const problemas = [
     {
         tipo: "multiples-operaciones",
-        titulo: "",
+        titulo: "Realiza las operaciones",
+        enunciado:'Calcula el resultado',
         operaciones: [
             { pregunta: "( - 5 ) – ( + 7 )", respuesta: "-12" },
             { pregunta: "( + 4 ) – ( - 6 )", respuesta: "10" },
@@ -15,7 +16,8 @@ const problemas = [
     },
     {
         tipo: "multiples-operaciones",
-        titulo: "",
+        titulo: "Realiza las operaciones",
+        enunciado:'Calcula el resultado',
         operaciones: [
             { pregunta: "12 + 5", respuesta: "17" },
             { pregunta: "12 + (-5)", respuesta: "7" },
@@ -27,7 +29,8 @@ const problemas = [
     },
     {
         tipo: "multiples-operaciones",
-        titulo: "",
+        titulo: "Realiza las operaciones",
+        enunciado:'Calcula el resultado',
         operaciones: [
             { pregunta: "(+6) – (-2) + (-5) – (+4)", respuesta: "-1" },
             { pregunta: "(-5) – (-5) – (+7) + (-6)", respuesta: "-13" },
