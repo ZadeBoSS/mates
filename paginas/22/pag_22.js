@@ -1,12 +1,14 @@
 import { mates } from '../script.js';
 const problemas = [
     {
+        titulo:'Resuelve este problema',
         pregunta: "Queremos guardar 768 latas de atún en cajas de 24 latas cada una. ¿Cuántas cajas son necesarias?",
         respuesta: "32",
         pista: "Divide el total entre el número de recipientes o personas, revisando los restos si es necesario.",
         explicacion: "En divisiones exactas, el cociente es el número requerido. Si hay un resto, eso será el sobrante."
     },
     {
+        titulo:'Resuelve este problema',
         pregunta: "María, Antonio y Ana coleccionan sellos. Su tío tiene 235 para repartir entre los tres.¿Cuántos puede dar a cada uno?",
         respuesta: "78",
         pista: "En divisiones exactas, el cociente es el número requerido. Si hay un resto, eso será el sobrante.",
