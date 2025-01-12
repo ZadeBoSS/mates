@@ -39,11 +39,12 @@ const problemas = [
         tipo: "multiples-operaciones",
         titulo: "Operaciones Multiples",
         operaciones: [
-            { pregunta: "6 · (- 3) + 5 · (- 2) + (- 4) · (- 5)", respuesta: "" },
-            { pregunta: "-2 · [ -3 + 4 · (-5 -2) ]", respuesta: "" },
-            { pregunta: "2 – 3 · [(5 – 2) · (3 – 6 ) + 8 ]", respuesta: "" },
-            { pregunta: "2 · (3 + 5 ) – (8 – 1) + (-1) · (3 + 1) – 8", respuesta: "" }
+            { pregunta: "6 · (- 3) + 5 · (- 2) + (- 4) · (- 5)", respuesta: "-8" },
+            { pregunta: "-2 · [ -3 + 4 · (-5 -2) ]", respuesta: "58" },
+            { pregunta: "2 – 3 · [(5 – 2) · (3 – 6 ) + 8 ]", respuesta: "-64" },
+            { pregunta: "2 · (3 + 5 ) – (8 – 1) + (-1) · (3 + 1) – 8", respuesta: "6" }
         ],
+        
         pista: "Sigue el orden de operaciones: paréntesis, multiplicaciones y divisiones, y finalmente sumas o restas.",
         explicacion: "Resuelve paso a paso, respetando las reglas del orden de operaciones."
     }
