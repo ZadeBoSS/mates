@@ -1,7 +1,7 @@
 import {mates} from '../mates.js';
 const problemas = [
     {
-        tipo: "factor-comun",
+        tipo: "multiples-operaciones",
         titulo: "Factor Común",
         operaciones: [
             { pregunta: "3·b + 5·b – 2·b", respuesta: "6·b" },
@@ -13,7 +13,7 @@ const problemas = [
         explicacion: "El factor común es el término que se repite en cada suma."
     },
     {
-        tipo: "multiplicaciones",
+        tipo: "multiples-operaciones",
         titulo: "Multiplicaciones",
         operaciones: [
             { pregunta: "2306 x 305", respuesta: 703330 },
@@ -25,7 +25,7 @@ const problemas = [
         explicacion: "Recuerda que multiplicar números negativos sigue reglas específicas."
     },
     {
-        tipo: "propiedades",
+        tipo: "multiples-operaciones",
         titulo: "Propiedades",
         operaciones: [
             { pregunta: "55 + 23 + 15 = 55 + 15 + 23", respuesta: "Conmutativa" },
@@ -39,4 +39,3 @@ const problemas = [
 ];
 
 mates(problemas);
-
