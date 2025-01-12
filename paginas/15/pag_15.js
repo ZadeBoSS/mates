@@ -1,4 +1,4 @@
-import {mates} from '../paginas/mates.js';
+import {mates} from '../mates.js';
 
 const problemas = [
          {
