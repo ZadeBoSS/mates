@@ -193,7 +193,7 @@ summary:hover {
 }
 
 .navigation {
-    width:97%;
+    width:108%;
     display: flex;
     justify-content: space-between;
     gap: 1rem;
