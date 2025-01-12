@@ -32,7 +32,7 @@ const problemas = [
     {
         tipo: "multiples-operaciones",
         titulo: "Ponte a prueba",
-        pregunta: 'Calcula el cuarto término de las siguientes proporciones',
+        enunciado: 'Calcula el cuarto término de las siguientes proporciones',
         operaciones: [
             { pregunta: "36/20 = 45/X", respuesta: "25" },
             { pregunta: "12,6/X = 0,2/0,5", respuesta: "31.5" },
