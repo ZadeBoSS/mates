@@ -1,6 +1,7 @@
 export function mates(problemas){
 
 
+
 let problemaActual = 0;
 let problemasResueltos = new Array(problemas.length).fill(false);
 let tiempoInicio;
@@ -22,7 +23,7 @@ function inicializarCarrusel() {
                     ${problema.operaciones.map((op, idx) => `
                         <div class="operation">
                             <p>${op.pregunta}</p>
-                            <input type="number" id="multiInput${index}-${idx}" class="answer-input" placeholder="Respuesta">
+                            <input type="text" id="multiInput${index}-${idx}" class="answer-input" placeholder="Respuesta">
                         </div>
                     `).join('')}
                     </div>
@@ -38,7 +39,7 @@ function inicializarCarrusel() {
                     <h2>Problema ${index + 1}</h2>
                     <p>${problema.pregunta}</p>
                     <div class="answer-section">
-                        <input type="number" id="input${index + 1}" step="0.01" class="answer-input" placeholder="Escribe tu respuesta aquí">
+                        <input type="text" id="input${index + 1}" step="0.01" class="answer-input" placeholder="Escribe tu respuesta aquí">
                         <button class="nav-btn check-btn">Verificar Respuesta</button>
                         <div class="hints-section">
                             <button class="hint-btn">Ver Pista</button>
@@ -435,14 +436,13 @@ function navegarA(index) {
 
 function verificarRespuesta(index) {
     const idInput = document.getElementById(`input${index + 1}`);
-    const respuestaUsuario = parseFloat(idInput.value);  // Cambia parseInt por parseFloat
+    const respuestaUsuario = idInput.value.trim();  // Obtenemos el valor del input como texto
     const feedback = document.querySelectorAll('.feedback')[index];
 
-    // Comparación estricta para números enteros o con tolerancia para flotantes
-    const diferencia = Math.abs(respuestaUsuario - problemas[index].respuesta);
-    const tolerancia = problemas[index].respuesta % 1 === 0 ? 0 : 0.1;
+    // Comparación estricta de texto
+    const respuestaCorrecta = problemas[index].respuesta.trim();  // Aseguramos que ambos valores sean cadenas limpias
 
-    if (diferencia <= tolerancia) {
+    if (respuestaUsuario === respuestaCorrecta) {
         feedback.textContent = `¡Correcto! ${problemas[index].explicacion}`;
         feedback.className = "feedback correct";
         problemasResueltos[index] = true;
@@ -458,6 +458,7 @@ function verificarRespuesta(index) {
 
     actualizarBarraProgreso();
 }
+
 
 function verificarMultiples(index) {
     const problema = problemas[index];
@@ -496,5 +497,5 @@ function verificarMultiples(index) {
 
 // Inicializar la aplicación
 window.onload = inicializarCarrusel;
-    
+
 }
