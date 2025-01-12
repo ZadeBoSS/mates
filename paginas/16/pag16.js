@@ -16,10 +16,10 @@ const problemas = [
         tipo: "multiples-operaciones",
         titulo: "Multiplicaciones",
         operaciones: [
-            { pregunta: "2306 x 305", respuesta: 703330 },
-            { pregunta: "(-2) · (-5) · (-9)", respuesta: -90 },
-            { pregunta: "4 · (-5) · 2", respuesta: -40 },
-            { pregunta: "3 · (-3) + 4 · (-2) + (-4) · (-5)", respuesta: 11 }
+            { pregunta: "2306 x 305", respuesta: "703330" },
+            { pregunta: "(-2) · (-5) · (-9)", respuesta: "-90" },
+            { pregunta: "4 · (-5) · 2", respuesta: "-40" },
+            { pregunta: "3 · (-3) + 4 · (-2) + (-4) · (-5)", respuesta: "3" }
         ],
         pista: "Ten cuidado con los signos en las multiplicaciones.",
         explicacion: "Recuerda que multiplicar números negativos sigue reglas específicas."
@@ -33,7 +33,7 @@ const problemas = [
             { pregunta: "5 · (8 + 18) = 5 · 8 + 5 · 18", respuesta: "Distributiva" },
             { pregunta: "87 − 23 = 84 − 20 = 64", respuesta: "No aplica ninguna de las propiedades clásicas (es una operación directa)." }
         ],
-        pista: "Identifica cómo cambian el orden o la agrupación.",
+        pista: "Identifica cómo cambian el orden o la agrupación. Recuerda los tipos de propiedades:(Conmutativa, Asociativa y Distributiva)",
         explicacion: "Las propiedades indican cómo operar los números manteniendo el resultado."
     }
 ];
