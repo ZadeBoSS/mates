@@ -18,7 +18,7 @@ const problemas = [
         tipo: "multiples-operaciones",
         titulo: "Operaciones Multiples",
         operaciones: [
-            { pregunta: "49067 ÷ 31", respuesta: "1582 " },
+            { pregunta: "49067 ÷ 31", respuesta: "1582" },
             { pregunta: "34597 ÷ 475", respuesta: "72.86" }
         ],
         pista: "Resuelve cada operación por separado.",
