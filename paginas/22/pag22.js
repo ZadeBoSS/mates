@@ -16,7 +16,8 @@ const problemas = [
     },
     {
         tipo: "multiples-operaciones",
-        titulo: "Operaciones Multiples",
+        titulo: "Realiza las operaciones",
+        pregunta:'Operaciones multiples',
         operaciones: [
             { pregunta: "49067 ÷ 31", respuesta: "1582" },
             { pregunta: "34597 ÷ 475", respuesta: "72.86" }
@@ -26,7 +27,8 @@ const problemas = [
     },
     {
         tipo: "multiples-operaciones",
-        titulo: "Operaciones Multiples",
+        titulo: "Realiza las operaciones",
+        pregunta:'Operaciones multiples',
         operaciones: [
             { pregunta: "6 : (− 2)", respuesta: "-3" },
             { pregunta: "(–20) : (+10)", respuesta: "-2" },
@@ -39,7 +41,8 @@ const problemas = [
     },
     {
         tipo: "multiples-operaciones",
-        titulo: "Operaciones Multiples",
+        titulo: "Realiza las operaciones",
+        pregunta:'Operaciones multiples',
         operaciones: [
             { pregunta: "6 · (- 3) + 5 · (- 2) + (- 4) · (- 5)", respuesta: "-8" },
             { pregunta: "-2 · [ -3 + 4 · (-5 -2) ]", respuesta: "58" },
