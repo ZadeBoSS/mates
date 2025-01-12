@@ -1,4 +1,4 @@
-import { mates } from '../mates.js';
+import { mates } from '../script.js';
 const problemas = [
     {
         pregunta: "Queremos guardar 768 latas de atún en cajas de 24 latas cada una. ¿Cuántas cajas son necesarias?",
