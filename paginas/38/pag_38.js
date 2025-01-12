@@ -1,3 +1,5 @@
+import {mates} from '../script.js';
+
 const problemas = [
     {
         tipo: 'multiples-operaciones',
@@ -31,3 +33,4 @@ const problemas = [
         explicacion: "Juan tiene 11 años, y su madre tiene  2 × 11 + 5 = 27 2×11+5=27 años."
     }
 ];
+mates(problemas);
