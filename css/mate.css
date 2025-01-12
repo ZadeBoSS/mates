@@ -23,7 +23,7 @@
 }
 
 body {
-    background-color: transparent;
+    background-color: #000;
     color: var(--text-color);
     line-height: 1.6;
 }
