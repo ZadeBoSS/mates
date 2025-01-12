@@ -232,6 +232,7 @@ summary:hover {
 }
 
 .tool.accordeon {
+    display:none;
     height: 4.35em;
     position: relative;
     z-index: 2;
