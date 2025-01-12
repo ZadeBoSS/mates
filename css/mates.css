@@ -193,7 +193,7 @@ summary:hover {
 }
 
 .navigation {
-    width:97%;
+    width:110%;
     display: flex;
     justify-content: space-between;
     gap: 1rem;
@@ -574,7 +574,7 @@ input[type="number"] {
 }
 
 .icono-back,.icono-next {
-    width:5em;
+    width:4em;
 
 }
 .icono-back {
