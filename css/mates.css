@@ -261,7 +261,8 @@ summary:hover {
     margin: 2em auto;
     width: 15rem;
     background:gray;
-    left:3%;
+    top:1%;
+    left:1%;
     position: absolute;
     z-index:3000;
     pointer-events: all;
