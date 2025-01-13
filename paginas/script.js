@@ -184,6 +184,9 @@ function inicializarCalculadora() {
         if (btn.includes('÷') || btn.includes('×') || btn.includes('+') || btn.includes('-')) {
             // Cambia el fondo de los operadores
             button.style.background = '#000';
+        } else if (btn.includes('C')) {
+            // Cambia el fondo de los operadores
+            button.style.background = 'red';
         }
     });
 }
