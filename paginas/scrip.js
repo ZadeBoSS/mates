@@ -498,4 +498,9 @@ function verificarMultiples(index) {
 // Inicializar la aplicación
 window.onload = inicializarCarrusel;
 
+// Selecciona el primer hijo del elemento con id 'actividad'
+const primerHijo = document.querySelector('#actividad').firstElementChild;
+
+// Crea un icono de calculadora usando un carácter especial o HTML
+primerHijo.innerHTML = '&#x1F5A1;';  // Esto es el código Unicode para un icono de calculadora
 }
