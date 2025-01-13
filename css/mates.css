@@ -37,18 +37,18 @@ body {
 
 .div-sidebar {
     position: fixed;
-    z-index: 99;
     width: 0%;
     height: 105%;
-    background-color: var(--sidebar-color);
+    z-index:10;
+    background: none;
     border-radius: 0 20px 20px 0;
-    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
 }
 
 /* Estilos del Sidebar */
 .sidebar {
-    width: 0;
-    background-color: transparent;
+    width: 0%;
+    background: none;
     color: white;
     overflow-y: auto;
     scrollbar-color: #fff transparent;
@@ -57,7 +57,7 @@ body {
     position: fixed;
     height: 95%;
     top: 5%;
-    z-index: 100;
+    z-index: 1;
     border-radius: 0 30px 30px 0;
     scrollbar-width: none;
 }
@@ -67,11 +67,11 @@ h2 {
 }
 
 .div-sidebar.active {
-    width: 83%;
+    width: 100%;
 }
 
 .sidebar.active {
-    width: 80%;
+    width: 100%;
 }
 
 .sidebar-content {
@@ -259,7 +259,24 @@ summary:hover {
 
 .tool.calculadora {
     margin: 2em auto;
-    width: 20rem;
+    width: 15rem;
+    background:gray;
+    left:3%;
+    position: absolute;
+    z-index:3000;
+    pointer-events: all;
+}
+.tool.calculadora h3{
+    color:transparent;
+}
+.tool.calculadora h3::after {
+    content:'Calculadora';
+    position:relative;
+    bottom:1.5em;
+    right:2.33em; 
+    font-size:1.4em;
+    font-weight: 800;
+    color:#fff;
 }
 
 .conversor {
@@ -305,7 +322,7 @@ summary:hover {
 }
 
 .calc-btn {
-    padding: 0.75rem;
+    padding: 0.25rem;
     background: var(--accent-color);
     color: white;
     border: none;
